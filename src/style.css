@@ -32,18 +32,19 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+
+.todays-weather {
+  vertical-align: bottom;
+}
 .below-city {
   padding-left: 15px;
 }
 .main-temperature {
-  text-align: end;
   font-size: 50px;
-  padding-right: 0px;
-  position: relative;
+  text-align: right;
   break-inside: avoid-column;
-  bottom: 75px;
-  right: 145px;
 }
+
 .celsius,
 .fahrenheit,
 .space {
@@ -54,6 +55,7 @@ ul {
   text-align: end;
   padding-left: 0px;
   float: right;
+  break-inside: avoid-column;
 }
 
 .columns-days {
