@@ -30,7 +30,8 @@ h1 {
 
 ul {
   list-style: none;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .todays-weather {
