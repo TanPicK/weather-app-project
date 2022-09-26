@@ -1,6 +1,18 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+h1 {
+  margin-left: 15px;
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .page {
   border: 1px solid none;
   padding: 30px;
@@ -18,24 +30,12 @@ body {
 .current-button-column {
   padding: 0px;
 }
-h1 {
-  margin-left: 15px;
-  margin-top: 20px;
-  font-size: 50px;
-}
 
 .main-emoji {
   font-size: 50px;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .todays-weather {
-  vertical-align: bottom;
 }
 .below-city {
   padding-left: 15px;
