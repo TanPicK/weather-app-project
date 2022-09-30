@@ -34,6 +34,10 @@ function showWeatherCondition(response) {
     city = "Zürich";
   }
   celsiusTemperature = response.data.main.temp;
+  let dateElement = document.querySelector("#todays-date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#main-icon");
+
   document.querySelector("#city").innerHTML = city;
   document.querySelector("#temperature").innerHTML =
     Math.round(celsiusTemperature);
@@ -43,8 +47,11 @@ function showWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  let dateElement = document.querySelector("#todays-date");
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
