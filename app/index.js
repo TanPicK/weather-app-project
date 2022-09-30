@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -42,6 +43,8 @@ function showWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  let dateElement = document.querySelector("#todays-date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
@@ -84,10 +87,6 @@ function displayCelsiusTemperature(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
-
-let dateElement = document.querySelector("#todays-date");
-let today = new Date();
-dateElement.innerHTML = formatDate(today);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
