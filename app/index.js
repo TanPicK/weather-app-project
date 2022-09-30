@@ -24,9 +24,12 @@ function formatDate(date) {
 }
 
 function showWeatherCondition(response) {
-  console.log(response);
   let city = response.data.name;
-  if (city.includes("Zürich") || city.includes("Zurich")) {
+  if (
+    city.includes("Zürich") ||
+    city.includes("Zurich") ||
+    city.includes("Letten")
+  ) {
     city = "Zürich";
   }
   document.querySelector("#city").innerHTML = city;
@@ -38,7 +41,7 @@ function showWeatherCondition(response) {
     response.data.wind.speed * 3.6
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function searchCity(city) {

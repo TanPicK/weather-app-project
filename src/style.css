@@ -38,6 +38,9 @@ ul {
 .below-city {
   padding-left: 15px;
 }
+.description {
+  text-transform: capitalize;
+}
 .main-temperature {
   font-size: 50px;
   text-align: right;
@@ -50,7 +53,7 @@ ul {
   font-size: 17px;
   vertical-align: top;
 }
-.weather-description {
+.humidity-wind {
   text-align: end;
   padding-left: 0px;
   float: right;
