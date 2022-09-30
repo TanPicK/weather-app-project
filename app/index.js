@@ -32,10 +32,10 @@ function showWeatherCondition(response) {
   ) {
     city = "Zürich";
   }
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = city;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed * 3.6
@@ -69,16 +69,16 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function fahrenheitTemperature(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(temperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
-function celsiusTemperature(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = 19;
+  temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
 let dateElement = document.querySelector("#todays-date");
@@ -88,11 +88,13 @@ dateElement.innerHTML = formatDate(today);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", fahrenheitTemperature);
+let celsiusTemperature = null;
 
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", celsiusTemperature);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
