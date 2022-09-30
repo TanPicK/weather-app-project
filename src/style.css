@@ -47,11 +47,18 @@ ul {
   break-inside: avoid-column;
 }
 
+.active {
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
 .celsius,
 .fahrenheit,
 .space {
   font-size: 17px;
   vertical-align: top;
+  text-decoration: none;
 }
 .humidity-wind {
   text-align: end;
