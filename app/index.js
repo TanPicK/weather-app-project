@@ -25,7 +25,11 @@ function formatDate(date) {
 
 function showWeatherCondition(response) {
   console.log(response);
-  document.querySelector("#city").innerHTML = response.data.name;
+  let city = response.data.name;
+  if (city.includes("Zürich") || city.includes("Zurich")) {
+    city = "Zürich";
+  }
+  document.querySelector("#city").innerHTML = city;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
