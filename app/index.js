@@ -14,7 +14,7 @@ function formatDate(timestamp) {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thrusday",
+    "Thursday",
     "Friday",
     "Satuday",
   ];
@@ -22,6 +22,27 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
 
   return `${day} ${hours}:${minutes}`;
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+        <div class="forecast-day">${day}</div>
+        <div class="emoji-one"><i class="fa-solid fa-sun"></i></div>
+          <div class="forecast-temperatures">
+            <span class="forecast-temperature-max">28°</span>
+            <span class="forecast-temperature-min">28°</span>
+          </div>
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 function showWeatherCondition(response) {
@@ -110,3 +131,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
+displayForecast();
