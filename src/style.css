@@ -56,17 +56,13 @@ ul {
   color: black;
 }
 
-.units {
+.unit {
   position: relative;
   break-inside: avoid-column;
-  vertical-align: top;
+  bottom: 26px;
   font-size: 17px;
 }
 
-.fahrenheit,
-.celsius {
-  text-decoration: none;
-}
 .humidity-wind {
   text-align: end;
   padding-left: 0px;
