@@ -76,20 +76,20 @@ ul {
   top: 15px;
 }
 
-.weather-forecast {
+.forecast {
   text-align: center;
   margin-top: 30px;
 }
 
-.weather-forecast-day {
+.forecast-day {
   font-size: 16px;
   opacity: 0.6;
 }
 
-.weather-forecast-temperatures {
+.forecast-temperatures {
   font-size: 13px;
 }
-.weather-forecast-temperature-min {
+.forecast-temperature-min {
   opacity: 0.6;
 }
 
