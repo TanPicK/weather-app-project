@@ -42,10 +42,10 @@ function displayForecast() {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 
 function showWeatherCondition(response) {
+  console.log(response);
   let city = response.data.name;
   if (
     city.includes("Zürich") ||
@@ -73,6 +73,7 @@ function showWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
