@@ -32,8 +32,7 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  forecastDay = response.data.daily;
-  console.log(response);
+  let forecastDay = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -67,12 +66,10 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "215576bab28022db35e6e64f040e1b56";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function showWeatherCondition(response) {
-  console.log(response);
   let city = response.data.name;
   if (
     city.includes("Zürich") ||
