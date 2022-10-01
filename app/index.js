@@ -56,6 +56,7 @@ function displayForecast(response) {
               forecastInfo.temp.min
             )}°</span>
           </div>
+          </div>
         `;
     }
   });
