@@ -76,22 +76,23 @@ ul {
   top: 15px;
 }
 
-.columns-days {
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  margin-top: 0px;
-}
-.column-one,
-.column-two,
-.column-three,
-.column-four,
-.column-five,
-.column-six {
-  padding: 0px 15px;
+.weather-forecast {
   text-align: center;
-  font-size: 20px;
+  margin-top: 30px;
 }
+
+.weather-forecast-day {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
 .footer {
   font-size: 14px;
   position: relative;
