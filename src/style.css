@@ -95,3 +95,31 @@ ul {
   position: relative;
   margin-top: 10px;
 }
+
+@media (max-width: 780px) {
+  h1 {
+    font-size: 30px;
+  }
+  .city {
+    padding: 0px;
+  }
+  .emoji-column {
+    padding: 0 30px 5px 0;
+  }
+  .main-temperature {
+    padding: 0;
+  }
+  .humidity-wind {
+    text-align: start;
+    float: left;
+    font-size: 12px;
+    padding-left: 15px;
+  }
+
+  .below-city {
+    font-size: 12px;
+  }
+  .weather-app {
+    padding: 15px;
+  }
+}

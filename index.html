@@ -29,7 +29,7 @@
       <div class="page">
         <div class="weather-app">
           <form id="search-form">
-            <div class="row">
+            <div class="row search-form">
               <div class="col-8">
                 <input
                   type="search"
@@ -61,10 +61,10 @@
           </form>
           <br />
           <div class="row">
-            <div class="col-9" class="city">
+            <div class="col-9 city">
               <h1 id="city">Zurich</h1>
             </div>
-            <div class="col-3">
+            <div class="col-3 emoji-column">
               <img
                 class="main-emoji"
                 id="main-icon"
@@ -75,16 +75,17 @@
           </div>
 
           <div class="row todays-weather">
-            <div class="col-6">
+            <div class="col-6 below-city-column">
               <ul class="below-city">
                 <li>Latest update: <span id="todays-date"> </span></li>
                 <li class="description" id="description"></li>
               </ul>
             </div>
             <div class="col-3 main-temperature" id="main-temperature">
-              <span id="temperature"> </span><span class="unit">°C</span>
+              <span class="temperature" id="temperature"> </span
+              ><span class="unit">°C</span>
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
               <ul class="humidity-wind">
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
@@ -93,7 +94,7 @@
           </div>
           <div class="forecast" id="forecast"></div>
         </div>
-        <footer class="col-12 footer">
+        <footer class="col-md-12 footer">
           <a
             href="https://github.com/TanPicK/weather-app-project"
             target="_blank"
